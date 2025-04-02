@@ -24,7 +24,7 @@ const categoryMapping = {
     ENTERTAINMENT: { iOS: 6016, Android: 'ENTERTAINMENT' },
     FINANCE: { iOS: 6015, Android: 'FINANCE' },
     FOOD_AND_DRINK: { iOS: 6023, Android: 'FOOD_AND_DRINK' },
-    
+
     GAMES: { iOS: 6014, Android: 'GAME' },
     GAMES_ACTION: { iOS: 7001, Android: 'GAME_ACTION' },
     GAMES_ADVENTURE: { iOS: 7002, Android: 'GAME_ADVENTURE' },
@@ -44,10 +44,10 @@ const categoryMapping = {
     GAMES_STRATEGY: { iOS: 7017, Android: 'GAME_STRATEGY' },
     GAMES_TRIVIA: { iOS: 7018, Android: 'GAME_TRIVIA' },
     GAMES_WORD: { iOS: 7019, Android: 'GAME_WORD' },
-  
+
     HEALTH_AND_FITNESS: { iOS: 6013, Android: 'HEALTH_AND_FITNESS' },
     LIFESTYLE: { iOS: 6012, Android: 'LIFESTYLE' },
-  
+
     MAGAZINES_AND_NEWSPAPERS: { iOS: 6021, Android: 'NEWS_AND_MAGAZINES' },
     MAGAZINES_ARTS: { iOS: 13007, Android: 'ART_AND_DESIGN' },
     MAGAZINES_AUTOMOTIVE: { iOS: 13006, Android: 'AUTO_AND_VEHICLES' },
@@ -77,7 +77,7 @@ const categoryMapping = {
     MAGAZINES_TEENS: { iOS: 13028, Android: 'FAMILY' },
     MAGAZINES_TRAVEL: { iOS: 13029, Android: 'TRAVEL_AND_LOCAL' },
     MAGAZINES_WOMEN: { iOS: 13030, Android: 'LIFESTYLE' },
-  
+
     MEDICAL: { iOS: 6020, Android: 'MEDICAL' },
     MUSIC: { iOS: 6011, Android: 'MUSIC_AND_AUDIO' },
     NAVIGATION: { iOS: 6010, Android: 'MAPS_AND_NAVIGATION' },
@@ -91,5 +91,6 @@ const categoryMapping = {
     TRAVEL: { iOS: 6003, Android: 'TRAVEL_AND_LOCAL' },
     UTILITIES: { iOS: 6002, Android: 'TOOLS' },
     WEATHER: { iOS: 6001, Android: 'WEATHER' }
-  };
-    
+}
+
+export { collectionMapping, categoryMapping }

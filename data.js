@@ -1,6 +1,6 @@
 //Class that represent an interface for the data to be scraped
 class App {
-    constructor(id, name, os, rating, downloads, ratings, reviews, dev_address, categories) {
+    constructor(id, name, os, rating, downloads, ratings, reviews, developer,  dev_address) {
         this._id = id;
         this._name = name;
         this._os = os;
@@ -10,7 +10,6 @@ class App {
         this._reviews = reviews
         this._developer = developer
         this._dev_address = dev_address
-        this._categories = categories
     }
 
     info() {
@@ -26,5 +25,7 @@ class App {
             this._dev_address,
             this._categories
         ]
-    };
-};
+    }
+}
+
+export default App

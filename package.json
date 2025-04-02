@@ -1,0 +1,26 @@
+{
+  "name": "idz",
+  "version": "1.0.0",
+  "description": "This Project uses Google Play Scraper and App Store Scraper for fetching apps based on searched name/category and collection",
+  "homepage": "https://github.com/Gotalicp/ASO-40#readme",
+  "bugs": {
+    "url": "https://github.com/Gotalicp/ASO-40/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gotalicp/ASO-40.git"
+  },
+  "license": "ISC",
+  "author": "AZ",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "app-store-scraper": "^0.18.0",
+    "fs": "^0.0.1-security",
+    "google-play-scraper": "^10.0.1"
+  },
+  "devDependencies": {}
+}
