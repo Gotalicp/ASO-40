@@ -95,7 +95,7 @@ function loadExistingData(filename) {
 }
 
 export default async function main() {
-    console.log("Starting itunes scraper...")
+    console.log("Starting Apple Store scraper...")
     // If the term is set, the scraper will search for apps by name, otherwise it will search by category
     const results = globalThis.sharedData.term ? await getAppsIdByTerm() : await getAppsIdByList()
     await getApps(results)

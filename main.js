@@ -1,6 +1,3 @@
-// This script initializes the shared data object and imports the Google Play and Apple App Store scrapers.
-// It also handles errors and logs the progress of the scrapers.
-
 import { collectionMapping, categoryMapping } from './collections.js'
 
 // The shared data object contains the parameters for the scrapers, such as category, number of apps, language, country, price, and filename.
@@ -41,24 +38,17 @@ globalThis.sharedData = {
     filename: 'apps.json',
     search_android_apps: true,
     search_ios_apps: true,
-};
+}
 
-console.log("Initializing main script...");
+console.log("Initializing main script...")
 if (globalThis.sharedData.search_android_apps)
     import('./play_store_scraper.js')
-        .then(module => {
-            console.log("Starting Google Play scraper...");
-            return module.default();
-        })
-        .catch(error => console.error(`Error executing goolge play: ${error}`));
+        .then(module => { return module.default() })
+        .catch(error => console.error(`Error executing goolge play: ${error}`))
 
 if (globalThis.sharedData.search_ios_apps)
     import('./app_store_scraper.js')
-        .then(module => {
-            console.log("Starting Apple Store scraper...");
-            return module.default();
-        })
-        .then(() => {
-            console.log("All scrapers finished.");
-        })
-        .catch(error => console.error(`Error executing apple store: ${error}`));
+        .then(module => { return module.default() })
+        .catch(error => console.error(`Error executing apple store: ${error}`))
+
+console.log("All scrapers finished.")

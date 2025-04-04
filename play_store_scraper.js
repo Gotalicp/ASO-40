@@ -103,7 +103,7 @@ function loadExistingData(filename) {
 //Main function that runs the scraper
 //This function will be called from the main.js file
 export default async function main() {
-    console.log("Starting google play scraper...")
+    console.log("Starting Google Play scraper...");
     //if the term is set, the scraper will search for apps by name, otherwise it will search by category
     const results = globalThis.sharedData.term ? await getAppsIdByTerm() : await getAppsIdByList()
     await getApps(results);

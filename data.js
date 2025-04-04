@@ -1,29 +1,38 @@
-//Class that represent an interface for the data to be scraped
+// Class that represents an interface for the data to be scraped
 class App {
-    constructor(id, name, os, rating, downloads, ratings, reviews, developer,  dev_address) {
-        this._id = id;
-        this._name = name;
-        this._os = os;
-        this._rating = rating;
-        this._downloads = downloads
-        this._ratings = ratings
-        this._reviews = reviews
-        this._developer = developer
-        this._dev_address = dev_address
+    constructor(
+        id = 'N/A',
+        name = 'N/A',
+        os = 'N/A',
+        rating = 'N/A',
+        downloads = 'N/A',
+        ratings = 'N/A',
+        reviews = 'N/A',
+        developer = 'N/A',
+        dev_address = 'N/A'
+    ) {
+        this.id = id;
+        this.name = name;
+        this.os = os;
+        this.rating = rating;
+        this.downloads = downloads;
+        this.ratings = ratings;
+        this.reviews = reviews;
+        this.developer = developer;
+        this.dev_address = dev_address;
     }
 
     info() {
         return [
-            this._id,
-            this._name,
-            this._os,
-            this._rating,
-            this._downloads,
-            this._ratings,
-            this._reviews,
-            this._developer,
-            this._dev_address,
-            this._categories
+            this.id,
+            this.name,
+            this.os,
+            this.rating,
+            this.downloads,
+            this.ratings,
+            this.reviews,
+            this.developer,
+            this.dev_address,
         ]
     }
 }
