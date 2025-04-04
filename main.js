@@ -40,15 +40,27 @@ globalThis.sharedData = {
     search_ios_apps: true,
 }
 
+async function runScrapers() {
+    if (globalThis.sharedData.search_android_apps) {
+        try {
+            const playStoreScraper = await import('./play_store_scraper.js')
+            await playStoreScraper.default();
+            console.log("Google Play scraper finished.")
+        } catch (error) {
+            console.error(`Error executing Google Play scraper: ${error}`)
+        }
+    }
+
+    if (globalThis.sharedData.search_ios_apps) {
+        try {
+            const appStoreScraper = await import('./app_store_scraper.js')
+            await appStoreScraper.default()
+            console.log("Apple App Store scraper finished.")
+        } catch (error) {
+            console.error(`Error executing Apple App Store scraper: ${error}`)
+        }
+    }
+    console.log("All scrapers finished.")
+}
 console.log("Initializing main script...")
-if (globalThis.sharedData.search_android_apps)
-    import('./play_store_scraper.js')
-        .then(module => { return module.default() })
-        .catch(error => console.error(`Error executing goolge play: ${error}`))
-
-if (globalThis.sharedData.search_ios_apps)
-    import('./app_store_scraper.js')
-        .then(module => { return module.default() })
-        .catch(error => console.error(`Error executing apple store: ${error}`))
-
-console.log("All scrapers finished.")
+runScrapers()
