@@ -1,7 +1,6 @@
 import store from 'app-store-scraper'
 import fs from 'fs'
 import App from './data.js'
-import { log } from 'console'
 
 async function getAppsIdByTerm() {
     // To work like the google play store, transform the num of apps into pages
